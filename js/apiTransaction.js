@@ -35,7 +35,7 @@ function getTopRatedMovies(){
     const path = '/movie/top_rated';
     const url = generateUrl(path);
 
-    const render = renderMovies.bind({title: 'Top Rated Movies'});
+    const render = renderMovies.bind({title: `Top Rated Movies<i class='fas fa-star'></i>`});
     requestMovies(url, render, handleError);
 }
 
@@ -43,9 +43,10 @@ function getPopularMovies(){
     const path = '/movie/popular';
     const url = generateUrl(path);
 
-    const render = renderMovies.bind({title: 'Most popular Movies'});
+    const render = renderMovies.bind({title: `What's Popular<i class='fas fa-thumbs-up'></i>`});
     requestMovies(url, render, handleError);
 }
+
 
 
 
